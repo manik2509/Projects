@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VSLV | Ayushman Jena</title>
+
+<!-- MathJax -->
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<header>
+  <nav class="container">
+    <h2 class="logo">Ayushman Jena</h2>
+  </nav>
+</header>
+
+<div class="wiki-page">
+
+    <!-- BACK -->
+<div class="wiki-back">
+    <a href="../index.html">← Home</a>
+</div>
+
+    <!-- TITLE -->
+   <div class="wiki-hero">
+
+    <div class="wiki-hero-bg">
+        <img src="../assets/images/projects/vslvbg.jpeg" alt="VSLV Launch">
+    </div>
+
+    <div class="wiki-title-area">
+        <h1>VSSUT Satellite Launch Vehicle: An MoU with ISRO</h1>
+        <h2> My Experience </h2>
+
+        <div class="wiki-meta">
+            <span>Ayushman Jena</span>
+            <span>March 2024</span>
+            <span>5 min read</span>
+
+            <span class="wiki-tag">Student Rocket Program</span>
+            <span class="wiki-tag">Sponsored by Dept of Space GoI.</span>
+        </div>
+       </div>
+
+   </div>
+
+    <!-- CONTENT ROW -->
+    <div class="wiki-content-row">
+
+        <!-- MAIN -->
+        <div class="wiki-main">
+
+            <!-- INTRO -->
+
+           <p style="text-align: justify;">
+VSLV was one of the most ambitious engineering projects I was involved in during my undergraduate years. Developed as a student rocketry initiative with an MoU with the Indian Space Research Organisation (ISRO), the project provided an opportunity to work on a real-world aerospace system where mechanical design, electronics, embedded systems, power management, communication, control, and systems engineering had to work together.
+
+What made the project particularly valuable was that it was not simply about building a rocket. It was about understanding how multiple engineering subsystems interact within a highly constrained and mission-oriented system.
+
+My involvement was primarily centred around the electrical and electronics aspects of the project, giving me practical exposure to embedded systems, instrumentation, power electronics, sensor integration, PCB-level electronics, and the challenges associated with designing electronics for a demanding aerospace environment.
+           </p>
+            <p style="text-align: justify;">
+                During my tenure as Student Coordinator at the Veer Surendra Sai Space Innovation Center (VSSSIC) from January 2023 to January 2024, I had the opportunity to work extensively on 
+              VSLV (VSSUT Satellite Launch Vehicle)—a flagship student rocketry initiative recognized by ISRO under the MoU with VSSUT Burla. My contributions to the project were centered around the development of critical onboard intelligence and system-level integration. 
+              I was actively involved in the flight computer development, where the focus was on building a reliable embedded system capable of handling real-time operations during flight. 
+              This included interfacing multiple sensors, ensuring robust data acquisition, and maintaining system stability under dynamic conditions. A significant part of my work revolved around sensor data fusion, combining inputs from IMUs and other
+              onboard sensors to obtain accurate estimates of the rocket’s state parameters such as orientation, velocity, and altitude. This required implementing and testing 
+              algorithms that could operate efficiently within hardware constraints while maintaining precision.  </p>
+            <p style="text-align: justify;">
+A student rocket development project begins with a mission objective and gradually evolves into a collection of interconnected subsystems.
+
+The overall architecture can be viewed as a combination of:
+
+Structural and mechanical systems
+Propulsion
+Avionics
+Electrical power systems
+Sensors and instrumentation
+Communication
+Embedded control and data acquisition
+Ground-support infrastructure
+
+The challenge is that none of these systems can be designed completely independently.
+
+A change in the mechanical structure can affect electronics packaging. Sensor placement can influence measurements. Power requirements affect battery selection and distribution. Communication requirements influence antenna and electronics design. Similarly, the embedded system has to acquire sensor data reliably while operating within the available computational and electrical resources.
+
+This systems-level perspective was one of the most important lessons from the VSLV project.
+            </p>
+
+          <!-- PROJECT VIDEO -->
+          <div class="wiki-video">
+              <video controls muted autoplay loop playsinline preload="metadata">
+                  <source src="../assets/videos/vslv_static.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+          
+              <div class="wiki-video-caption">
+                  Mid-night Static Test for 
+              </div>
+          </div>
+
+            <!-- EQUATION -->
+            <div class="equation">
+            \[
+            \nabla^2 p - \frac{1}{c^2} \frac{\partial^2 p}{\partial t^2} = 0
+            \]
+            </div>
+
+            <!-- SECTION -->
+            <h2>1. Vanadium</h2>
+            <p>First ever student led rocket that I worked on in the year 2022 guided by my seniors and professors. Named "Vanadium" because of it's atomic number 23 representing the passing-out batch of 2023,
+            who were leading the project at the time. I was a very new face, in the team at that time and had the opportunity to work on Avionics, flight computers and telemetry. The avionics system forms the electronic nervous system of a rocket.
+
+Sensors provide information about the state of the vehicle, while an embedded controller processes this information and manages data acquisition, storage, communication, and other mission functions.
+
+Working with embedded electronics introduced me to the practical difference between developing a circuit in isolation and developing electronics that have to operate as part of a complete system.
+
+Microcontrollers, sensors, communication interfaces, power supplies, signal conditioning, and data acquisition circuits all have to operate reliably together.
+
+This required attention to issues such as voltage levels, current consumption, grounding, noise, communication protocols, timing, sensor calibration, and fault conditions.
+
+The experience also strengthened my interest in embedded systems and eventually influenced several of my later projects involving Arduino, STM32, sensors, motor control, and instrumentation.
+            
+            A rocket generates a large amount of information during its operation.
+
+Sensors can be used to monitor different physical parameters and provide data that can later be used to understand the behaviour of the vehicle.
+
+However, collecting sensor data is more complicated than simply connecting a sensor to a microcontroller.
+
+The complete measurement chain involves:
+
+Physical quantity → Sensor → Signal conditioning → ADC → Embedded processing → Data storage/telemetry
+
+Each stage can introduce errors.
+
+Sensor noise, calibration errors, ADC resolution, sampling rate, electrical interference, timing inaccuracies, and communication failures can all influence the quality of the final data.
+
+This experience helped develop an appreciation for instrumentation as a complete engineering discipline rather than simply a collection of sensors.</p>
+
+            <!-- SECTION -->
+            <h2>2. Random</h2>
+            <p>This was the 2nd rocket that i had worked on, in the follwowing year 2023 named "Random" completely out of fun, cause I remember someone shared the moon knight meme "Random BullSh*t Go!!" and 
+              it kind of stuck with the team at the time ;) I learnt a lot during that phase, again diving deeper into the field of avionics and developing active datalogging system for the rocket. One of the biggest challenges in an aerospace project is integration.
+
+A subsystem can function correctly on its own and still fail when connected to the rest of the system.
+
+For this reason, testing needs to progress systematically from individual components to complete subsystems and eventually to the integrated vehicle.
+
+This involves checking electrical interfaces, communication, power distribution, sensor readings, embedded software behaviour, and mechanical integration.
+
+System-level testing also requires thinking about failure modes.
+
+What happens if a sensor stops responding?
+
+What happens if the supply voltage drops?
+
+What happens if communication is interrupted?
+
+What happens if the measured data becomes unreasonable?
+
+These questions shift the engineering mindset from simply asking "Does it work?" to asking "How does it fail, and how can the system respond? </p>
+
+            <!-- SECTION -->
+            <h2>3. Chromakrut</h2>
+            <p>The VSLV project was also valuable because it introduced the realities of collaborative engineering.
+
+A rocket cannot be developed by one discipline working independently. Mechanical, electrical, electronics, software, propulsion, and other teams have to coordinate their designs and interfaces.
+
+This creates a strong need for documentation, version control, testing procedures, interface specifications, and clear communication between teams.
+
+The experience provided an early exposure to the engineering practices required when multiple people are simultaneously developing different parts of a complex system.
+
+The association of the project with an ISRO MoU also provided an important academic and technical context, giving the project a connection to India's broader space-technology ecosystem.
+            The most important outcome of the project was not a particular circuit, microcontroller, or software implementation.
+
+It was learning to think about engineering systems as integrated architectures.
+
+A sensor is not just a sensor. It is part of a measurement chain.
+
+A microcontroller is not just a processor. It is part of an embedded system.
+
+A PCB is not just a collection of components. It is an interface between multiple subsystems.
+
+And a rocket is not simply a propulsion system. It is a tightly integrated combination of mechanical, electrical, computational, communication, and control systems.
+
+This systems perspective has continued to influence my subsequent work in embedded systems, robotics, control, instrumentation, and intelligent engineering systems.</p>
+
+            <!-- NOTE -->
+            <div class="wiki-note">
+                <strong>Note:</strong> Important insight here.
+            </div>
+
+        </div>
+
+
+        <!-- SIDEBAR -->
+        <div class="wiki-sidebar">
+
+            <!-- INFOBOX -->
+            <div class="wiki-infobox">
+                <img src="../assets/images/projects/avionics.jpg">
+                <div class="wiki-fig-caption">VSLV Avionics</div>
+<!--
+                <table>
+                    <tr><td>Parameter</td><td>Value</td></tr>
+                    <tr><td>Frequency</td><td>1 MHz</td></tr>
+                </table>
+-->              
+            </div>
+  
+
+            <!-- FIGURE -->
+            <div class="wiki-fig">
+                <img src="../assets/images/projects/VSLV Schema.jpeg">
+                <div class="wiki-fig-caption">ChromaKrut Schematic View</div>
+            </div>
+            <!-- SIDE VIDEO -->
+            <div class="wiki-fig wiki-side-video">
+                <video controls muted autoplay loop playsinline preload="metadata">
+                    <source src="../assets/videos/VSLV_liftoff.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            
+                <div class="wiki-fig-caption">
+                    VSLV Chromakrut Lift Off!!
+                </div>
+
+               <!-- SIDE VIDEO -->
+            <div class="wiki-fig wiki-side-video">
+                <video controls muted autoplay loop playsinline preload="metadata">
+                    <source src="../assets/videos/VSLV_recovery.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            
+                <div class="wiki-fig-caption">
+                    VSLV Chromakrut Full Body Recovery
+                </div>
+              
+            </div>
+
+        </div>
+  
+
+    </div>
+
+</div>
+
+<div class="wiki-gallery">
+
+    <h2>Project Gallery</h2>
+
+    <div class="wiki-gallery-item">
+        <img src="../assets/images/projects/chroma_team.jpg"
+             alt="VSLV Project">
+    </div>
+
+</div>
+
+</div>
+</body>
+</html>
