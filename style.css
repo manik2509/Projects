@@ -1,0 +1,694 @@
+/* =========================================================
+   CV WEBSITE — Manik Ranjan Sahoo
+   ========================================================= */
+
+/* ================= ROOT ================= */
+
+:root {
+  --text: #222;
+  --muted: #666;
+  --heading: #111;
+  --accent: #1f5f8b;
+  --accent-light: #eaf3f8;
+  --border: #dcdcdc;
+  --background: #ffffff;
+  --section-bg: #fafafa;
+
+  --max-width: 1050px;
+  --content-width: 900px;
+
+  --font-main:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+}
+
+
+/* ================= RESET ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.65;
+  font-size: 16px;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* ================= GENERAL CONTAINER ================= */
+
+.container {
+  width: min(100% - 40px, var(--max-width));
+  margin: 0 auto;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid var(--border);
+
+  backdrop-filter: blur(10px);
+}
+
+header nav {
+  min-height: 65px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.logo {
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--heading);
+  white-space: nowrap;
+}
+
+header ul {
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 25px;
+}
+
+header ul li a {
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 500;
+
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+header ul li a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+header ul li a.active {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+
+/* ================= CV PAGE ================= */
+
+.cv-page {
+  padding-bottom: 80px;
+}
+
+
+/* ================= CV HEADER ================= */
+
+.cv-header {
+  padding-top: 70px;
+  padding-bottom: 45px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 40px;
+
+  border-bottom: 2px solid var(--heading);
+}
+
+.cv-header h1 {
+  font-size: clamp(38px, 6vw, 58px);
+  line-height: 1.1;
+  color: var(--heading);
+  letter-spacing: -1.5px;
+}
+
+.cv-title {
+  margin-top: 10px;
+
+  color: var(--muted);
+
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.cv-contact {
+  margin-top: 22px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.cv-contact span {
+  display: inline-flex;
+  align-items: center;
+}
+
+.cv-contact a {
+  font-weight: 600;
+}
+
+
+/* ================= CV ACTIONS ================= */
+
+.cv-actions {
+  flex-shrink: 0;
+}
+
+.cv-btn {
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: white;
+
+  padding: 11px 18px;
+
+  border-radius: 6px;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.cv-btn:hover {
+  background: #174b6d;
+  transform: translateY(-1px);
+}
+
+
+/* ================= CV SECTIONS ================= */
+
+.cv-section {
+  padding-top: 45px;
+  padding-bottom: 10px;
+}
+
+.cv-section h2 {
+  margin-bottom: 25px;
+
+  color: var(--heading);
+
+  font-size: 25px;
+  line-height: 1.2;
+
+  position: relative;
+}
+
+.cv-section h2::after {
+  content: "";
+
+  display: block;
+
+  width: 45px;
+  height: 3px;
+
+  margin-top: 9px;
+
+  background: var(--accent);
+}
+
+.cv-section p {
+  max-width: var(--content-width);
+
+  color: var(--text);
+}
+
+
+/* ================= LISTS ================= */
+
+.cv-list {
+  max-width: var(--content-width);
+
+  padding-left: 21px;
+}
+
+.cv-list li {
+  margin-bottom: 8px;
+}
+
+.cv-list li::marker {
+  color: var(--accent);
+}
+
+
+/* ================= CV ITEMS ================= */
+
+.cv-item {
+  max-width: var(--content-width);
+
+  padding: 0 0 25px 0;
+  margin-bottom: 25px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.cv-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.cv-item h3 {
+  color: var(--heading);
+
+  font-size: 18px;
+  line-height: 1.35;
+
+  margin-bottom: 5px;
+}
+
+.cv-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  gap: 20px;
+}
+
+.cv-date {
+  flex-shrink: 0;
+
+  color: var(--muted);
+
+  font-size: 14px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.cv-institution {
+  color: var(--accent) !important;
+
+  font-weight: 600;
+
+  margin-bottom: 8px;
+}
+
+
+/* ================= PUBLICATIONS ================= */
+
+.publication-list {
+  max-width: var(--content-width);
+
+  padding-left: 25px;
+}
+
+.publication-list li {
+  margin-bottom: 18px;
+  padding-left: 5px;
+}
+
+.publication-list li::marker {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.publication-list em {
+  color: var(--muted);
+}
+
+
+/* ================= SKILLS GRID ================= */
+
+.skills-grid {
+  max-width: var(--content-width);
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 18px;
+}
+
+.skill-group {
+  padding: 20px;
+
+  border: 1px solid var(--border);
+  border-radius: 8px;
+
+  background: var(--section-bg);
+}
+
+.skill-group h3 {
+  margin-bottom: 8px;
+
+  color: var(--heading);
+
+  font-size: 16px;
+}
+
+.skill-group p {
+  color: var(--muted);
+
+  font-size: 14px;
+}
+
+
+/* ================= SOFTWARE LIST ================= */
+
+.software-list {
+  max-width: var(--content-width);
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+.software-list span {
+  display: inline-block;
+
+  padding: 7px 13px;
+
+  background: var(--accent-light);
+
+  border: 1px solid #d5e5ed;
+  border-radius: 5px;
+
+  color: var(--accent);
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* ================= REFERENCES ================= */
+
+.references-grid {
+  max-width: var(--content-width);
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 30px;
+}
+
+.reference {
+  padding: 20px;
+
+  border-left: 3px solid var(--accent);
+
+  background: var(--section-bg);
+}
+
+.reference h3 {
+  margin-bottom: 8px;
+
+  color: var(--heading);
+
+  font-size: 17px;
+}
+
+.reference p {
+  color: var(--muted);
+
+  font-size: 14px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+  padding: 30px 0;
+
+  border-top: 1px solid var(--border);
+
+  color: var(--muted);
+
+  text-align: center;
+
+  font-size: 13px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 800px) {
+
+  header nav {
+    min-height: auto;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header ul {
+    width: 100%;
+
+    justify-content: flex-start;
+
+    overflow-x: auto;
+
+    padding-bottom: 3px;
+
+    gap: 20px;
+  }
+
+  header ul li {
+    flex-shrink: 0;
+  }
+
+  .cv-header {
+    padding-top: 45px;
+
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cv-actions {
+    width: 100%;
+  }
+
+  .cv-btn {
+    width: 100%;
+  }
+
+  .skills-grid,
+  .references-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 500px) {
+
+  .container {
+    width: min(100% - 28px, var(--max-width));
+  }
+
+  body {
+    font-size: 15px;
+  }
+
+  .cv-header h1 {
+    font-size: 40px;
+  }
+
+  .cv-title {
+    font-size: 16px;
+  }
+
+  .cv-contact {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .cv-section {
+    padding-top: 35px;
+  }
+
+  .cv-section h2 {
+    font-size: 22px;
+  }
+
+  .cv-item-header {
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .cv-date {
+    font-size: 13px;
+  }
+
+}
+
+
+/* =========================================================
+   PRINT / PDF
+   ========================================================= */
+
+@media print {
+
+  @page {
+    size: A4;
+    margin: 15mm;
+  }
+
+  body {
+    background: white;
+    color: black;
+    font-size: 10.5pt;
+    line-height: 1.45;
+  }
+
+  header {
+    display: none;
+  }
+
+  .container {
+    width: 100%;
+    max-width: none;
+  }
+
+  .cv-page {
+    padding: 0;
+  }
+
+  .cv-header {
+    padding-top: 0;
+    padding-bottom: 20px;
+
+    border-bottom: 1.5px solid black;
+  }
+
+  .cv-header h1 {
+    font-size: 30pt;
+  }
+
+  .cv-title {
+    font-size: 12pt;
+  }
+
+  .cv-contact {
+    margin-top: 10px;
+
+    font-size: 9pt;
+  }
+
+  .cv-actions {
+    display: none;
+  }
+
+  .cv-section {
+    padding-top: 22px;
+  }
+
+  .cv-section h2 {
+    margin-bottom: 12px;
+
+    font-size: 15pt;
+  }
+
+  .cv-section h2::after {
+    display: none;
+  }
+
+  .cv-section p {
+    max-width: none;
+  }
+
+  .cv-item {
+    max-width: none;
+
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+
+    border-bottom: 0;
+  }
+
+  .cv-item h3 {
+    font-size: 11.5pt;
+  }
+
+  .skills-grid {
+    max-width: none;
+
+    gap: 10px;
+  }
+
+  .skill-group {
+    padding: 10px;
+
+    border-radius: 0;
+  }
+
+  .software-list span {
+    padding: 3px 7px;
+
+    background: white;
+
+    border: 1px solid #aaa;
+
+    color: black;
+  }
+
+  .references-grid {
+    max-width: none;
+
+    gap: 15px;
+  }
+
+  .reference {
+    padding: 10px;
+
+    background: white;
+  }
+
+  footer {
+    display: none;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+}
